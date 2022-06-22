@@ -5,6 +5,10 @@
 		"type": "AzureSqlDW",
 		"typeProperties": {
 			"connectionString": "Integrated Security=False;Encrypt=True;Connection Timeout=30;Data Source=asaworkspacea6uoi8v.sql.azuresynapse.net;Initial Catalog=SQLPool01"
+		},
+		"connectVia": {
+			"referenceName": "integrationRuntime2",
+			"type": "IntegrationRuntimeReference"
 		}
 	}
 }
