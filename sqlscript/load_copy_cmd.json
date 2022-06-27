@@ -1,0 +1,17 @@
+{
+	"name": "load_copy_cmd",
+	"properties": {
+		"content": {
+			"query": "TRUNCATE TABLE wwi_staging.SaleHeap;\nGO\n\n-- Replace SUFFIX with the unique suffix for your resources\nCOPY INTO wwi_staging.SaleHeap\nFROM 'https://asadatalakea6uoi8v.dfs.core.windows.net/wwi-02/sale-small/Year=2019'\nWITH (\n    FILE_TYPE = 'PARQUET',\n    COMPRESSION = 'SNAPPY'\n)\nGO\n\nSELECT COUNT(1) FROM wwi_staging.SaleHeap(nolock)\nCREATE TABLE [wwi_staging].DailySalesCounts\n    (\n        [Date] [int]  NOT NULL,\n        [NorthAmerica] [int]  NOT NULL,\n        [SouthAmerica] [int]  NOT NULL,\n        [Europe] [int]  NOT NULL,\n        [Africa] [int]  NOT NULL,\n        [Asia] [int]  NOT NULL\n    )\nGO\n\n-- Replace SUFFIX with the unique suffix for your resources\nCOPY INTO wwi_staging.DailySalesCounts\nFROM 'https://asadatalakea6uoi8v.dfs.core.windows.net/wwi-02/campaign-analytics/dailycounts.txt'\nWITH (\n    FILE_TYPE = 'CSV',\n    FIELDTERMINATOR='.',\n    ROWTERMINATOR=','\n)\nGO;\n\nSELECT * FROM [wwi_staging].DailySalesCounts\nORDER BY [Date] DESC",
+			"metadata": {
+				"language": "sql"
+			},
+			"currentConnection": {
+				"databaseName": "SQLPool01",
+				"poolName": "SQLPool01"
+			},
+			"resultLimit": 5000
+		},
+		"type": "SqlQuery"
+	}
+}

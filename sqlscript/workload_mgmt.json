@@ -1,0 +1,17 @@
+{
+	"name": "workload_mgmt",
+	"properties": {
+		"content": {
+			"query": "IF EXISTS (SELECT * FROM sys.workload_management_workload_classifiers WHERE [name] = 'HeavyLoader')\nBEGIN\n    DROP WORKLOAD CLASSIFIER HeavyLoader\nEND;\n\nIF EXISTS (SELECT * FROM sys.workload_management_workload_groups WHERE name = 'BigDataLoad')\nBEGIN\n    DROP WORKLOAD GROUP BigDataLoad\nEND;\n\n--Create workload group\nCREATE WORKLOAD GROUP BigDataLoad WITH\n  (\n      MIN_PERCENTAGE_RESOURCE = 50, -- integer value\n      REQUEST_MIN_RESOURCE_GRANT_PERCENT = 25, --  (guaranteed min 4 concurrency)\n      CAP_PERCENTAGE_RESOURCE = 100\n  );\n\n-- Create workload classifier\nCREATE WORKLOAD Classifier HeavyLoader WITH\n(\n    Workload_Group ='BigDataLoad',\n    MemberName='asa.sql.import01',\n    IMPORTANCE = HIGH\n);\n\n-- View classifiers\nSELECT * FROM sys.workload_management_workload_classifiers",
+			"metadata": {
+				"language": "sql"
+			},
+			"currentConnection": {
+				"databaseName": "SQLPool01",
+				"poolName": "SQLPool01"
+			},
+			"resultLimit": 5000
+		},
+		"type": "SqlQuery"
+	}
+}

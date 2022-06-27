@@ -1,0 +1,417 @@
+{
+	"name": "SourceDataset_5ek",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureDataLakeStorage2",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Json",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": "multi_01.json",
+				"fileSystem": "data"
+			}
+		},
+		"schema": {
+			"type": "object",
+			"properties": {
+				"ClaimBilling": {
+					"type": "object",
+					"properties": {
+						"NcpdpRequest": {
+							"type": "object",
+							"properties": {
+								"S_01": {
+									"type": "object",
+									"properties": {
+										"F_304_C4": {
+											"type": "string"
+										},
+										"F_305_C5": {
+											"type": "string"
+										},
+										"F_307_C7": {
+											"type": "string"
+										},
+										"F_310_CA": {
+											"type": "string"
+										},
+										"F_311_CB": {
+											"type": "string"
+										},
+										"F_322_CM": {
+											"type": "string"
+										},
+										"F_323_CN": {
+											"type": "string"
+										},
+										"F_324_CO": {
+											"type": "string"
+										},
+										"F_325_CP": {
+											"type": "string"
+										},
+										"F_384_4X": {
+											"type": "string"
+										}
+									}
+								},
+								"S_03": {
+									"type": "array",
+									"items": {
+										"type": "object",
+										"properties": {
+											"F_365_2K": {
+												"type": "string"
+											},
+											"F_366_2M": {
+												"type": "string"
+											},
+											"F_367_2N": {
+												"type": "string"
+											},
+											"F_368_2P": {
+												"type": "string"
+											},
+											"F_411_DB": {
+												"type": "string"
+											},
+											"F_427_DR": {
+												"type": "string"
+											},
+											"F_466_EZ": {
+												"type": "string"
+											}
+										}
+									}
+								},
+								"S_04": {
+									"type": "object",
+									"properties": {
+										"F_301_C1": {
+											"type": "string"
+										},
+										"F_302_C2": {
+											"type": "string"
+										},
+										"F_303_C3": {
+											"type": "string"
+										},
+										"F_306_C6": {
+											"type": "string"
+										},
+										"F_309_C9": {
+											"type": "string"
+										},
+										"F_312_CC": {
+											"type": "string"
+										},
+										"F_313_CD": {
+											"type": "string"
+										}
+									}
+								},
+								"S_07": {
+									"type": "array",
+									"items": {
+										"type": "object",
+										"properties": {
+											"F_147_U7": {
+												"type": "string"
+											},
+											"F_308_C8": {
+												"type": "string"
+											},
+											"F_402_D2": {
+												"type": "string"
+											},
+											"F_403_D3": {
+												"type": "string"
+											},
+											"F_405_D5": {
+												"type": "string"
+											},
+											"F_406_D6": {
+												"type": "string"
+											},
+											"F_407_D7": {
+												"type": "string"
+											},
+											"F_408_D8": {
+												"type": "string"
+											},
+											"F_414_DE": {
+												"type": "string"
+											},
+											"F_415_DF": {
+												"type": "string"
+											},
+											"F_419_DJ": {
+												"type": "string"
+											},
+											"F_436_E1": {
+												"type": "string"
+											},
+											"F_442_E7": {
+												"type": "string"
+											},
+											"F_455_EM": {
+												"type": "string"
+											},
+											"F_600_28": {
+												"type": "string"
+											}
+										}
+									}
+								},
+								"S_11": {
+									"type": "array",
+									"items": {
+										"type": "object",
+										"properties": {
+											"F_409_D9": {
+												"type": "string"
+											},
+											"F_412_DC": {
+												"type": "string"
+											},
+											"F_423_DN": {
+												"type": "string"
+											},
+											"F_426_DQ": {
+												"type": "string"
+											},
+											"F_430_DU": {
+												"type": "string"
+											}
+										}
+									}
+								},
+								"S_13": {
+									"type": "array",
+									"items": {
+										"type": "object",
+										"properties": {
+											"F_424_DO.1": {
+												"type": "string"
+											},
+											"F_491_VE": {
+												"type": "string"
+											},
+											"F_492_WE.1": {
+												"type": "string"
+											}
+										}
+									}
+								},
+								"S_HD": {
+									"type": "object",
+									"properties": {
+										"F_101_A1": {
+											"type": "string"
+										},
+										"F_102_A2": {
+											"type": "string"
+										},
+										"F_103_A3": {
+											"type": "string"
+										},
+										"F_104_A4": {
+											"type": "string"
+										},
+										"F_109_A9": {
+											"type": "string"
+										},
+										"F_110_AK": {
+											"type": "null"
+										},
+										"F_201_B1": {
+											"type": "string"
+										},
+										"F_202_B2": {
+											"type": "string"
+										},
+										"F_401_D1": {
+											"type": "string"
+										}
+									}
+								}
+							}
+						},
+						"NcpdpResponse": {
+							"type": "object",
+							"properties": {
+								"S_21": {
+									"type": "array",
+									"items": {
+										"type": "object",
+										"properties": {
+											"F_112_AN": {
+												"type": "string"
+											},
+											"F_130_UF": {
+												"type": "string"
+											},
+											"F_132_UH.1": {
+												"type": "string"
+											},
+											"F_510_FA": {
+												"type": "string"
+											},
+											"F_511_FB.1": {
+												"type": "string"
+											},
+											"F_526_FQ.1": {
+												"type": "string"
+											},
+											"F_987_MA": {
+												"type": "string"
+											}
+										}
+									}
+								},
+								"S_22": {
+									"type": "array",
+									"items": {
+										"type": "object",
+										"properties": {
+											"F_402_D2": {
+												"type": "string"
+											},
+											"F_455_EM": {
+												"type": "string"
+											}
+										}
+									}
+								},
+								"S_25": {
+									"type": "object",
+									"properties": {
+										"F_301_C1": {
+											"type": "string"
+										},
+										"F_545_2F": {
+											"type": "string"
+										}
+									}
+								},
+								"S_HD": {
+									"type": "object",
+									"properties": {
+										"F_102_A2": {
+											"type": "string"
+										},
+										"F_103_A3": {
+											"type": "string"
+										},
+										"F_109_A9": {
+											"type": "string"
+										},
+										"F_201_B1": {
+											"type": "string"
+										},
+										"F_202_B2": {
+											"type": "string"
+										},
+										"F_401_D1": {
+											"type": "string"
+										},
+										"F_501_F1": {
+											"type": "string"
+										}
+									}
+								}
+							}
+						},
+						"Supplemental": {
+							"type": "object",
+							"properties": {
+								"DateSwitched": {
+									"type": "string"
+								},
+								"Drug": {
+									"type": "array",
+									"items": {
+										"type": "object",
+										"properties": {
+											"UnitPrice": {
+												"type": "string"
+											}
+										}
+									}
+								},
+								"Prescriber": {
+									"type": "array",
+									"items": {
+										"type": "object",
+										"properties": {
+											"City": {
+												"type": "string"
+											},
+											"CompanyName": {
+												"type": "string"
+											},
+											"FirstName": {
+												"type": "string"
+											},
+											"LastName": {
+												"type": "string"
+											},
+											"Phone": {
+												"type": "string"
+											},
+											"PrimaryAddress": {
+												"type": "string"
+											},
+											"SecondaryAddress": {
+												"type": "string"
+											},
+											"State": {
+												"type": "string"
+											},
+											"Zip": {
+												"type": "string"
+											}
+										}
+									}
+								},
+								"RecordType": {
+									"type": "string"
+								},
+								"Store": {
+									"type": "object",
+									"properties": {
+										"City": {
+											"type": "string"
+										},
+										"NcpdpNumber": {
+											"type": "string"
+										},
+										"State": {
+											"type": "string"
+										},
+										"StoreId": {
+											"type": "string"
+										},
+										"Zip": {
+											"type": "string"
+										}
+									}
+								},
+								"SwitchTransactionId": {
+									"type": "string"
+								},
+								"Vendor": {
+									"type": "string"
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	},
+	"type": "Microsoft.Synapse/workspaces/datasets"
+}

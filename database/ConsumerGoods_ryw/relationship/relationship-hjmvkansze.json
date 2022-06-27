@@ -1,0 +1,29 @@
+{
+	"name": "relationship-hjmvkansze",
+	"properties": {
+		"Name": "relationship-hjmvkansze",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "ConsumerGoods_ryw"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "Warehouse",
+		"ToTableName": "Order",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "WarehouseId",
+				"ToColumnName": "WarehouseId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"Warehouse.cdm.json/Warehouse\",\"toEntity\":\"Order.cdm.json/Order\",\"joinPairs\":[{\"fromAttribute\":\"WarehouseId\",\"toAttribute\":\"WarehouseId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "e3348c83-eeaa-4770-9537-a34c213cc30a"
+	},
+	"type": "RELATIONSHIP"
+}

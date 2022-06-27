@@ -1,0 +1,819 @@
+{
+	"name": "CopyPipeline_5ek",
+	"properties": {
+		"activities": [
+			{
+				"name": "Copy_5ek",
+				"type": "Copy",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [
+					{
+						"name": "Source",
+						"value": "data//multi_01.json"
+					},
+					{
+						"name": "Destination",
+						"value": "wwi-02//"
+					}
+				],
+				"typeProperties": {
+					"source": {
+						"type": "JsonSource",
+						"storeSettings": {
+							"type": "AzureBlobFSReadSettings",
+							"recursive": true,
+							"enablePartitionDiscovery": false
+						},
+						"formatSettings": {
+							"type": "JsonReadSettings"
+						}
+					},
+					"sink": {
+						"type": "DelimitedTextSink",
+						"storeSettings": {
+							"type": "AzureBlobFSWriteSettings"
+						},
+						"formatSettings": {
+							"type": "DelimitedTextWriteSettings",
+							"quoteAllText": true,
+							"fileExtension": ".txt"
+						}
+					},
+					"enableStaging": false,
+					"validateDataConsistency": false,
+					"translator": {
+						"type": "TabularTranslator",
+						"mappings": [
+							{
+								"source": {
+									"path": "$['ClaimBilling']['NcpdpRequest']['S_01']['F_304_C4']"
+								},
+								"sink": {
+									"ordinal": 1
+								}
+							},
+							{
+								"source": {
+									"path": "$['ClaimBilling']['NcpdpRequest']['S_01']['F_305_C5']"
+								},
+								"sink": {
+									"ordinal": 2
+								}
+							},
+							{
+								"source": {
+									"path": "$['ClaimBilling']['NcpdpRequest']['S_01']['F_307_C7']"
+								},
+								"sink": {
+									"ordinal": 3
+								}
+							},
+							{
+								"source": {
+									"path": "$['ClaimBilling']['NcpdpRequest']['S_01']['F_310_CA']"
+								},
+								"sink": {
+									"ordinal": 4
+								}
+							},
+							{
+								"source": {
+									"path": "$['ClaimBilling']['NcpdpRequest']['S_01']['F_311_CB']"
+								},
+								"sink": {
+									"ordinal": 5
+								}
+							},
+							{
+								"source": {
+									"path": "$['ClaimBilling']['NcpdpRequest']['S_01']['F_322_CM']"
+								},
+								"sink": {
+									"ordinal": 6
+								}
+							},
+							{
+								"source": {
+									"path": "$['ClaimBilling']['NcpdpRequest']['S_01']['F_323_CN']"
+								},
+								"sink": {
+									"ordinal": 7
+								}
+							},
+							{
+								"source": {
+									"path": "$['ClaimBilling']['NcpdpRequest']['S_01']['F_324_CO']"
+								},
+								"sink": {
+									"ordinal": 8
+								}
+							},
+							{
+								"source": {
+									"path": "$['ClaimBilling']['NcpdpRequest']['S_01']['F_325_CP']"
+								},
+								"sink": {
+									"ordinal": 9
+								}
+							},
+							{
+								"source": {
+									"path": "$['ClaimBilling']['NcpdpRequest']['S_01']['F_384_4X']"
+								},
+								"sink": {
+									"ordinal": 10
+								}
+							},
+							{
+								"source": {
+									"path": "$['ClaimBilling']['NcpdpRequest']['S_03'][0]['F_365_2K']"
+								},
+								"sink": {
+									"ordinal": 11
+								}
+							},
+							{
+								"source": {
+									"path": "$['ClaimBilling']['NcpdpRequest']['S_03'][0]['F_366_2M']"
+								},
+								"sink": {
+									"ordinal": 12
+								}
+							},
+							{
+								"source": {
+									"path": "$['ClaimBilling']['NcpdpRequest']['S_03'][0]['F_367_2N']"
+								},
+								"sink": {
+									"ordinal": 13
+								}
+							},
+							{
+								"source": {
+									"path": "$['ClaimBilling']['NcpdpRequest']['S_03'][0]['F_368_2P']"
+								},
+								"sink": {
+									"ordinal": 14
+								}
+							},
+							{
+								"source": {
+									"path": "$['ClaimBilling']['NcpdpRequest']['S_03'][0]['F_411_DB']"
+								},
+								"sink": {
+									"ordinal": 15
+								}
+							},
+							{
+								"source": {
+									"path": "$['ClaimBilling']['NcpdpRequest']['S_03'][0]['F_427_DR']"
+								},
+								"sink": {
+									"ordinal": 16
+								}
+							},
+							{
+								"source": {
+									"path": "$['ClaimBilling']['NcpdpRequest']['S_03'][0]['F_466_EZ']"
+								},
+								"sink": {
+									"ordinal": 17
+								}
+							},
+							{
+								"source": {
+									"path": "$['ClaimBilling']['NcpdpRequest']['S_04']['F_301_C1']"
+								},
+								"sink": {
+									"ordinal": 18
+								}
+							},
+							{
+								"source": {
+									"path": "$['ClaimBilling']['NcpdpRequest']['S_04']['F_302_C2']"
+								},
+								"sink": {
+									"ordinal": 19
+								}
+							},
+							{
+								"source": {
+									"path": "$['ClaimBilling']['NcpdpRequest']['S_04']['F_303_C3']"
+								},
+								"sink": {
+									"ordinal": 20
+								}
+							},
+							{
+								"source": {
+									"path": "$['ClaimBilling']['NcpdpRequest']['S_04']['F_306_C6']"
+								},
+								"sink": {
+									"ordinal": 21
+								}
+							},
+							{
+								"source": {
+									"path": "$['ClaimBilling']['NcpdpRequest']['S_04']['F_309_C9']"
+								},
+								"sink": {
+									"ordinal": 22
+								}
+							},
+							{
+								"source": {
+									"path": "$['ClaimBilling']['NcpdpRequest']['S_04']['F_312_CC']"
+								},
+								"sink": {
+									"ordinal": 23
+								}
+							},
+							{
+								"source": {
+									"path": "$['ClaimBilling']['NcpdpRequest']['S_04']['F_313_CD']"
+								},
+								"sink": {
+									"ordinal": 24
+								}
+							},
+							{
+								"source": {
+									"path": "$['ClaimBilling']['NcpdpRequest']['S_07'][0]['F_147_U7']"
+								},
+								"sink": {
+									"ordinal": 25
+								}
+							},
+							{
+								"source": {
+									"path": "$['ClaimBilling']['NcpdpRequest']['S_07'][0]['F_308_C8']"
+								},
+								"sink": {
+									"ordinal": 26
+								}
+							},
+							{
+								"source": {
+									"path": "$['ClaimBilling']['NcpdpRequest']['S_07'][0]['F_402_D2']"
+								},
+								"sink": {
+									"ordinal": 27
+								}
+							},
+							{
+								"source": {
+									"path": "$['ClaimBilling']['NcpdpRequest']['S_07'][0]['F_403_D3']"
+								},
+								"sink": {
+									"ordinal": 28
+								}
+							},
+							{
+								"source": {
+									"path": "$['ClaimBilling']['NcpdpRequest']['S_07'][0]['F_405_D5']"
+								},
+								"sink": {
+									"ordinal": 29
+								}
+							},
+							{
+								"source": {
+									"path": "$['ClaimBilling']['NcpdpRequest']['S_07'][0]['F_406_D6']"
+								},
+								"sink": {
+									"ordinal": 30
+								}
+							},
+							{
+								"source": {
+									"path": "$['ClaimBilling']['NcpdpRequest']['S_07'][0]['F_407_D7']"
+								},
+								"sink": {
+									"ordinal": 31
+								}
+							},
+							{
+								"source": {
+									"path": "$['ClaimBilling']['NcpdpRequest']['S_07'][0]['F_408_D8']"
+								},
+								"sink": {
+									"ordinal": 32
+								}
+							},
+							{
+								"source": {
+									"path": "$['ClaimBilling']['NcpdpRequest']['S_07'][0]['F_414_DE']"
+								},
+								"sink": {
+									"ordinal": 33
+								}
+							},
+							{
+								"source": {
+									"path": "$['ClaimBilling']['NcpdpRequest']['S_07'][0]['F_415_DF']"
+								},
+								"sink": {
+									"ordinal": 34
+								}
+							},
+							{
+								"source": {
+									"path": "$['ClaimBilling']['NcpdpRequest']['S_07'][0]['F_419_DJ']"
+								},
+								"sink": {
+									"ordinal": 35
+								}
+							},
+							{
+								"source": {
+									"path": "$['ClaimBilling']['NcpdpRequest']['S_07'][0]['F_436_E1']"
+								},
+								"sink": {
+									"ordinal": 36
+								}
+							},
+							{
+								"source": {
+									"path": "$['ClaimBilling']['NcpdpRequest']['S_07'][0]['F_442_E7']"
+								},
+								"sink": {
+									"ordinal": 37
+								}
+							},
+							{
+								"source": {
+									"path": "$['ClaimBilling']['NcpdpRequest']['S_07'][0]['F_455_EM']"
+								},
+								"sink": {
+									"ordinal": 38
+								}
+							},
+							{
+								"source": {
+									"path": "$['ClaimBilling']['NcpdpRequest']['S_07'][0]['F_600_28']"
+								},
+								"sink": {
+									"ordinal": 39
+								}
+							},
+							{
+								"source": {
+									"path": "$['ClaimBilling']['NcpdpRequest']['S_11'][0]['F_409_D9']"
+								},
+								"sink": {
+									"ordinal": 40
+								}
+							},
+							{
+								"source": {
+									"path": "$['ClaimBilling']['NcpdpRequest']['S_11'][0]['F_412_DC']"
+								},
+								"sink": {
+									"ordinal": 41
+								}
+							},
+							{
+								"source": {
+									"path": "$['ClaimBilling']['NcpdpRequest']['S_11'][0]['F_423_DN']"
+								},
+								"sink": {
+									"ordinal": 42
+								}
+							},
+							{
+								"source": {
+									"path": "$['ClaimBilling']['NcpdpRequest']['S_11'][0]['F_426_DQ']"
+								},
+								"sink": {
+									"ordinal": 43
+								}
+							},
+							{
+								"source": {
+									"path": "$['ClaimBilling']['NcpdpRequest']['S_11'][0]['F_430_DU']"
+								},
+								"sink": {
+									"ordinal": 44
+								}
+							},
+							{
+								"source": {
+									"path": "$['ClaimBilling']['NcpdpRequest']['S_13'][0]['F_424_DO.1']"
+								},
+								"sink": {
+									"ordinal": 45
+								}
+							},
+							{
+								"source": {
+									"path": "$['ClaimBilling']['NcpdpRequest']['S_13'][0]['F_491_VE']"
+								},
+								"sink": {
+									"ordinal": 46
+								}
+							},
+							{
+								"source": {
+									"path": "$['ClaimBilling']['NcpdpRequest']['S_13'][0]['F_492_WE.1']"
+								},
+								"sink": {
+									"ordinal": 47
+								}
+							},
+							{
+								"source": {
+									"path": "$['ClaimBilling']['NcpdpRequest']['S_HD']['F_101_A1']"
+								},
+								"sink": {
+									"ordinal": 48
+								}
+							},
+							{
+								"source": {
+									"path": "$['ClaimBilling']['NcpdpRequest']['S_HD']['F_102_A2']"
+								},
+								"sink": {
+									"ordinal": 49
+								}
+							},
+							{
+								"source": {
+									"path": "$['ClaimBilling']['NcpdpRequest']['S_HD']['F_103_A3']"
+								},
+								"sink": {
+									"ordinal": 50
+								}
+							},
+							{
+								"source": {
+									"path": "$['ClaimBilling']['NcpdpRequest']['S_HD']['F_104_A4']"
+								},
+								"sink": {
+									"ordinal": 51
+								}
+							},
+							{
+								"source": {
+									"path": "$['ClaimBilling']['NcpdpRequest']['S_HD']['F_109_A9']"
+								},
+								"sink": {
+									"ordinal": 52
+								}
+							},
+							{
+								"source": {
+									"path": "$['ClaimBilling']['NcpdpRequest']['S_HD']['F_110_AK']"
+								},
+								"sink": {
+									"ordinal": 53
+								}
+							},
+							{
+								"source": {
+									"path": "$['ClaimBilling']['NcpdpRequest']['S_HD']['F_201_B1']"
+								},
+								"sink": {
+									"ordinal": 54
+								}
+							},
+							{
+								"source": {
+									"path": "$['ClaimBilling']['NcpdpRequest']['S_HD']['F_202_B2']"
+								},
+								"sink": {
+									"ordinal": 55
+								}
+							},
+							{
+								"source": {
+									"path": "$['ClaimBilling']['NcpdpRequest']['S_HD']['F_401_D1']"
+								},
+								"sink": {
+									"ordinal": 56
+								}
+							},
+							{
+								"source": {
+									"path": "$['ClaimBilling']['NcpdpResponse']['S_21'][0]['F_112_AN']"
+								},
+								"sink": {
+									"ordinal": 57
+								}
+							},
+							{
+								"source": {
+									"path": "$['ClaimBilling']['NcpdpResponse']['S_21'][0]['F_130_UF']"
+								},
+								"sink": {
+									"ordinal": 58
+								}
+							},
+							{
+								"source": {
+									"path": "$['ClaimBilling']['NcpdpResponse']['S_21'][0]['F_132_UH.1']"
+								},
+								"sink": {
+									"ordinal": 59
+								}
+							},
+							{
+								"source": {
+									"path": "$['ClaimBilling']['NcpdpResponse']['S_21'][0]['F_510_FA']"
+								},
+								"sink": {
+									"ordinal": 60
+								}
+							},
+							{
+								"source": {
+									"path": "$['ClaimBilling']['NcpdpResponse']['S_21'][0]['F_511_FB.1']"
+								},
+								"sink": {
+									"ordinal": 61
+								}
+							},
+							{
+								"source": {
+									"path": "$['ClaimBilling']['NcpdpResponse']['S_21'][0]['F_526_FQ.1']"
+								},
+								"sink": {
+									"ordinal": 62
+								}
+							},
+							{
+								"source": {
+									"path": "$['ClaimBilling']['NcpdpResponse']['S_21'][0]['F_987_MA']"
+								},
+								"sink": {
+									"ordinal": 63
+								}
+							},
+							{
+								"source": {
+									"path": "$['ClaimBilling']['NcpdpResponse']['S_22'][0]['F_402_D2']"
+								},
+								"sink": {
+									"ordinal": 64
+								}
+							},
+							{
+								"source": {
+									"path": "$['ClaimBilling']['NcpdpResponse']['S_22'][0]['F_455_EM']"
+								},
+								"sink": {
+									"ordinal": 65
+								}
+							},
+							{
+								"source": {
+									"path": "$['ClaimBilling']['NcpdpResponse']['S_25']['F_301_C1']"
+								},
+								"sink": {
+									"ordinal": 66
+								}
+							},
+							{
+								"source": {
+									"path": "$['ClaimBilling']['NcpdpResponse']['S_25']['F_545_2F']"
+								},
+								"sink": {
+									"ordinal": 67
+								}
+							},
+							{
+								"source": {
+									"path": "$['ClaimBilling']['NcpdpResponse']['S_HD']['F_102_A2']"
+								},
+								"sink": {
+									"ordinal": 68
+								}
+							},
+							{
+								"source": {
+									"path": "$['ClaimBilling']['NcpdpResponse']['S_HD']['F_103_A3']"
+								},
+								"sink": {
+									"ordinal": 69
+								}
+							},
+							{
+								"source": {
+									"path": "$['ClaimBilling']['NcpdpResponse']['S_HD']['F_109_A9']"
+								},
+								"sink": {
+									"ordinal": 70
+								}
+							},
+							{
+								"source": {
+									"path": "$['ClaimBilling']['NcpdpResponse']['S_HD']['F_201_B1']"
+								},
+								"sink": {
+									"ordinal": 71
+								}
+							},
+							{
+								"source": {
+									"path": "$['ClaimBilling']['NcpdpResponse']['S_HD']['F_202_B2']"
+								},
+								"sink": {
+									"ordinal": 72
+								}
+							},
+							{
+								"source": {
+									"path": "$['ClaimBilling']['NcpdpResponse']['S_HD']['F_401_D1']"
+								},
+								"sink": {
+									"ordinal": 73
+								}
+							},
+							{
+								"source": {
+									"path": "$['ClaimBilling']['NcpdpResponse']['S_HD']['F_501_F1']"
+								},
+								"sink": {
+									"ordinal": 74
+								}
+							},
+							{
+								"source": {
+									"path": "$['ClaimBilling']['Supplemental']['DateSwitched']"
+								},
+								"sink": {
+									"ordinal": 75
+								}
+							},
+							{
+								"source": {
+									"path": "$['ClaimBilling']['Supplemental']['Drug'][0]['UnitPrice']"
+								},
+								"sink": {
+									"ordinal": 76
+								}
+							},
+							{
+								"source": {
+									"path": "$['ClaimBilling']['Supplemental']['Prescriber'][0]['City']"
+								},
+								"sink": {
+									"ordinal": 77
+								}
+							},
+							{
+								"source": {
+									"path": "$['ClaimBilling']['Supplemental']['Prescriber'][0]['CompanyName']"
+								},
+								"sink": {
+									"ordinal": 78
+								}
+							},
+							{
+								"source": {
+									"path": "$['ClaimBilling']['Supplemental']['Prescriber'][0]['FirstName']"
+								},
+								"sink": {
+									"ordinal": 79
+								}
+							},
+							{
+								"source": {
+									"path": "$['ClaimBilling']['Supplemental']['Prescriber'][0]['LastName']"
+								},
+								"sink": {
+									"ordinal": 80
+								}
+							},
+							{
+								"source": {
+									"path": "$['ClaimBilling']['Supplemental']['Prescriber'][0]['Phone']"
+								},
+								"sink": {
+									"ordinal": 81
+								}
+							},
+							{
+								"source": {
+									"path": "$['ClaimBilling']['Supplemental']['Prescriber'][0]['PrimaryAddress']"
+								},
+								"sink": {
+									"ordinal": 82
+								}
+							},
+							{
+								"source": {
+									"path": "$['ClaimBilling']['Supplemental']['Prescriber'][0]['SecondaryAddress']"
+								},
+								"sink": {
+									"ordinal": 83
+								}
+							},
+							{
+								"source": {
+									"path": "$['ClaimBilling']['Supplemental']['Prescriber'][0]['State']"
+								},
+								"sink": {
+									"ordinal": 84
+								}
+							},
+							{
+								"source": {
+									"path": "$['ClaimBilling']['Supplemental']['Prescriber'][0]['Zip']"
+								},
+								"sink": {
+									"ordinal": 85
+								}
+							},
+							{
+								"source": {
+									"path": "$['ClaimBilling']['Supplemental']['RecordType']"
+								},
+								"sink": {
+									"ordinal": 86
+								}
+							},
+							{
+								"source": {
+									"path": "$['ClaimBilling']['Supplemental']['Store']['City']"
+								},
+								"sink": {
+									"ordinal": 87
+								}
+							},
+							{
+								"source": {
+									"path": "$['ClaimBilling']['Supplemental']['Store']['NcpdpNumber']"
+								},
+								"sink": {
+									"ordinal": 88
+								}
+							},
+							{
+								"source": {
+									"path": "$['ClaimBilling']['Supplemental']['Store']['State']"
+								},
+								"sink": {
+									"ordinal": 89
+								}
+							},
+							{
+								"source": {
+									"path": "$['ClaimBilling']['Supplemental']['Store']['StoreId']"
+								},
+								"sink": {
+									"ordinal": 90
+								}
+							},
+							{
+								"source": {
+									"path": "$['ClaimBilling']['Supplemental']['Store']['Zip']"
+								},
+								"sink": {
+									"ordinal": 91
+								}
+							},
+							{
+								"source": {
+									"path": "$['ClaimBilling']['Supplemental']['SwitchTransactionId']"
+								},
+								"sink": {
+									"ordinal": 92
+								}
+							},
+							{
+								"source": {
+									"path": "$['ClaimBilling']['Supplemental']['Vendor']"
+								},
+								"sink": {
+									"ordinal": 93
+								}
+							}
+						]
+					}
+				},
+				"inputs": [
+					{
+						"referenceName": "SourceDataset_5ek",
+						"type": "DatasetReference"
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "DestinationDataset_5ek",
+						"type": "DatasetReference"
+					}
+				]
+			}
+		],
+		"annotations": [],
+		"lastPublishTime": "2022-06-26T20:04:49Z"
+	},
+	"type": "Microsoft.Synapse/workspaces/pipelines"
+}

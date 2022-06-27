@@ -1,0 +1,1182 @@
+{
+	"name": "FIXX_FILE_USINGPANDA_pyspark",
+	"properties": {
+		"nbformat": 4,
+		"nbformat_minor": 2,
+		"bigDataPool": {
+			"referenceName": "SparkPool01",
+			"type": "BigDataPoolReference"
+		},
+		"sessionProperties": {
+			"driverMemory": "28g",
+			"driverCores": 4,
+			"executorMemory": "28g",
+			"executorCores": 4,
+			"numExecutors": 2,
+			"conf": {
+				"spark.dynamicAllocation.enabled": "false",
+				"spark.dynamicAllocation.minExecutors": "2",
+				"spark.dynamicAllocation.maxExecutors": "2",
+				"spark.autotune.trackingId": "48059219-f1b7-4810-afbc-301463b5de24"
+			}
+		},
+		"metadata": {
+			"saveOutput": true,
+			"synapse_widget": {
+				"version": "0.1",
+				"state": {
+					"4bd521c8-d987-44b8-8625-71c26cb8cf95": {
+						"type": "Synapse.DataFrame",
+						"sync_state": {
+							"table": {
+								"rows": [
+									{
+										"0": "e067fc11-e07d-4517-bc93-f7dc4b44f35e",
+										"1": "3",
+										"2": "4581",
+										"3": "4",
+										"4": "20.84",
+										"5": "91.696",
+										"6": "20170501",
+										"7": "26.048",
+										"8": "2",
+										"9": "30",
+										"10": "7922"
+									},
+									{
+										"0": "e067fc11-e07d-4517-bc93-f7dc4b44f35e",
+										"1": "3",
+										"2": "1365",
+										"3": "4",
+										"4": "26.52",
+										"5": "116.688",
+										"6": "20170501",
+										"7": "29.436",
+										"8": "2",
+										"9": "30",
+										"10": "7922"
+									},
+									{
+										"0": "e067fc11-e07d-4517-bc93-f7dc4b44f35e",
+										"1": "3",
+										"2": "2641",
+										"3": "4",
+										"4": "29.71",
+										"5": "130.724",
+										"6": "20170501",
+										"7": "37.4",
+										"8": "2",
+										"9": "30",
+										"10": "7922"
+									},
+									{
+										"0": "e067fc11-e07d-4517-bc93-f7dc4b44f35e",
+										"1": "3",
+										"2": "220",
+										"3": "2",
+										"4": "27.6",
+										"5": "60.72",
+										"6": "20170501",
+										"7": "15.356",
+										"8": "2",
+										"9": "30",
+										"10": "7922"
+									},
+									{
+										"0": "e067fc11-e07d-4517-bc93-f7dc4b44f35e",
+										"1": "3",
+										"2": "110",
+										"3": "3",
+										"4": "28.41",
+										"5": "93.753",
+										"6": "20170501",
+										"7": "33.0",
+										"8": "2",
+										"9": "30",
+										"10": "7922"
+									},
+									{
+										"0": "e067fc11-e07d-4517-bc93-f7dc4b44f35e",
+										"1": "3",
+										"2": "2",
+										"3": "1",
+										"4": "39.78",
+										"5": "43.758",
+										"6": "20170501",
+										"7": "11.528",
+										"8": "2",
+										"9": "30",
+										"10": "7922"
+									},
+									{
+										"0": "cdd2ed88-8aae-4295-884a-ac4d40c3c33c",
+										"1": "11",
+										"2": "3323",
+										"3": "1",
+										"4": "30.52",
+										"5": "33.572",
+										"6": "20170501",
+										"7": "10.252",
+										"8": "20",
+										"9": "43",
+										"10": "3573"
+									},
+									{
+										"0": "cdd2ed88-8aae-4295-884a-ac4d40c3c33c",
+										"1": "11",
+										"2": "4763",
+										"3": "4",
+										"4": "21.29",
+										"5": "93.676",
+										"6": "20170501",
+										"7": "29.216",
+										"8": "20",
+										"9": "43",
+										"10": "3573"
+									},
+									{
+										"0": "cdd2ed88-8aae-4295-884a-ac4d40c3c33c",
+										"1": "11",
+										"2": "4070",
+										"3": "1",
+										"4": "35.76",
+										"5": "39.336",
+										"6": "20170501",
+										"7": "10.076",
+										"8": "20",
+										"9": "43",
+										"10": "3573"
+									},
+									{
+										"0": "cdd2ed88-8aae-4295-884a-ac4d40c3c33c",
+										"1": "11",
+										"2": "582",
+										"3": "3",
+										"4": "34.05",
+										"5": "112.365",
+										"6": "20170501",
+										"7": "28.578",
+										"8": "20",
+										"9": "43",
+										"10": "3573"
+									}
+								],
+								"schema": [
+									{
+										"key": "0",
+										"name": "TransactionId",
+										"type": "string"
+									},
+									{
+										"key": "1",
+										"name": "CustomerId",
+										"type": "int"
+									},
+									{
+										"key": "2",
+										"name": "ProductId",
+										"type": "int"
+									},
+									{
+										"key": "3",
+										"name": "Quantity",
+										"type": "int"
+									},
+									{
+										"key": "4",
+										"name": "Price",
+										"type": "double"
+									},
+									{
+										"key": "5",
+										"name": "TotalAmount",
+										"type": "double"
+									},
+									{
+										"key": "6",
+										"name": "TransactionDate",
+										"type": "int"
+									},
+									{
+										"key": "7",
+										"name": "ProfitAmount",
+										"type": "double"
+									},
+									{
+										"key": "8",
+										"name": "Hour",
+										"type": "int"
+									},
+									{
+										"key": "9",
+										"name": "Minute",
+										"type": "int"
+									},
+									{
+										"key": "10",
+										"name": "StoreId",
+										"type": "int"
+									}
+								],
+								"truncated": false
+							},
+							"isSummary": false,
+							"language": "scala"
+						},
+						"persist_state": {
+							"view": {
+								"type": "details",
+								"chartOptions": {
+									"chartType": "bar",
+									"aggregationType": "sum",
+									"categoryFieldKeys": [
+										"0"
+									],
+									"seriesFieldKeys": [
+										"1"
+									],
+									"isStacked": false
+								}
+							}
+						}
+					},
+					"0175ad7a-2e62-4a7c-8a93-ec87056ddd7f": {
+						"type": "Synapse.DataFrame",
+						"sync_state": {
+							"table": {
+								"rows": [
+									null,
+									{
+										"0": "3",
+										"1": "110"
+									},
+									{
+										"0": "3",
+										"1": "2641"
+									},
+									{
+										"0": "3",
+										"1": "220"
+									},
+									{
+										"0": "3",
+										"1": "4581"
+									},
+									{
+										"0": "3",
+										"1": "1365"
+									},
+									{
+										"0": "3",
+										"1": "2"
+									},
+									{
+										"0": "11",
+										"1": "3323"
+									},
+									{
+										"0": "11",
+										"1": "32"
+									},
+									{
+										"0": "11",
+										"1": "4070"
+									},
+									{
+										"0": "11",
+										"1": "70"
+									},
+									{
+										"0": "11",
+										"1": "4763"
+									},
+									{
+										"0": "11",
+										"1": "194"
+									},
+									{
+										"0": "11",
+										"1": "582"
+									},
+									{
+										"0": "41",
+										"1": "88"
+									},
+									{
+										"0": "41",
+										"1": "1091"
+									},
+									{
+										"0": "41",
+										"1": "3564"
+									},
+									{
+										"0": "41",
+										"1": "2726"
+									},
+									{
+										"0": "41",
+										"1": "84"
+									},
+									{
+										"0": "41",
+										"1": "244"
+									},
+									{
+										"0": "41",
+										"1": "3009"
+									},
+									{
+										"0": "41",
+										"1": "4660"
+									},
+									{
+										"0": "41",
+										"1": "186"
+									},
+									{
+										"0": "41",
+										"1": "126"
+									},
+									{
+										"0": "41",
+										"1": "3321"
+									},
+									{
+										"0": "41",
+										"1": "134"
+									},
+									{
+										"0": "42",
+										"1": "2836"
+									},
+									{
+										"0": "42",
+										"1": "2996"
+									},
+									{
+										"0": "42",
+										"1": "3256"
+									},
+									{
+										"0": "42",
+										"1": "229"
+									},
+									{
+										"0": "42",
+										"1": "57"
+									},
+									{
+										"0": "42",
+										"1": "4843"
+									},
+									{
+										"0": "42",
+										"1": "4544"
+									},
+									{
+										"0": "42",
+										"1": "35"
+									},
+									{
+										"0": "43",
+										"1": "2031"
+									},
+									{
+										"0": "43",
+										"1": "153"
+									},
+									{
+										"0": "43",
+										"1": "4220"
+									},
+									{
+										"0": "43",
+										"1": "30"
+									},
+									{
+										"0": "43",
+										"1": "412"
+									},
+									{
+										"0": "43",
+										"1": "3478"
+									},
+									{
+										"0": "43",
+										"1": "2776"
+									},
+									{
+										"0": "52",
+										"1": "160"
+									},
+									{
+										"0": "52",
+										"1": "2711"
+									},
+									{
+										"0": "52",
+										"1": "4830"
+									},
+									{
+										"0": "52",
+										"1": "609"
+									},
+									{
+										"0": "52",
+										"1": "686"
+									},
+									{
+										"0": "52",
+										"1": "18"
+									},
+									{
+										"0": "52",
+										"1": "3604"
+									},
+									{
+										"0": "52",
+										"1": "4260"
+									},
+									{
+										"0": "52",
+										"1": "619"
+									},
+									{
+										"0": "52",
+										"1": "209"
+									},
+									{
+										"0": "61",
+										"1": "37"
+									},
+									{
+										"0": "61",
+										"1": "3663"
+									},
+									{
+										"0": "61",
+										"1": "112"
+									},
+									{
+										"0": "61",
+										"1": "1302"
+									},
+									{
+										"0": "61",
+										"1": "1329"
+									},
+									{
+										"0": "61",
+										"1": "2482"
+									},
+									{
+										"0": "61",
+										"1": "2430"
+									},
+									{
+										"0": "61",
+										"1": "176"
+									},
+									{
+										"0": "61",
+										"1": "2655"
+									},
+									{
+										"0": "61",
+										"1": "4196"
+									},
+									{
+										"0": "61",
+										"1": "2751"
+									},
+									{
+										"0": "64",
+										"1": "48"
+									},
+									{
+										"0": "64",
+										"1": "3039"
+									},
+									{
+										"0": "64",
+										"1": "3352"
+									},
+									{
+										"0": "64",
+										"1": "1140"
+									},
+									{
+										"0": "64",
+										"1": "2240"
+									},
+									{
+										"0": "64",
+										"1": "1397"
+									},
+									{
+										"0": "64",
+										"1": "2229"
+									},
+									{
+										"0": "64",
+										"1": "2551"
+									},
+									{
+										"0": "64",
+										"1": "263"
+									},
+									{
+										"0": "64",
+										"1": "169"
+									},
+									{
+										"0": "64",
+										"1": "3779"
+									},
+									{
+										"0": "64",
+										"1": "1447"
+									},
+									{
+										"0": "70",
+										"1": "3514"
+									},
+									{
+										"0": "70",
+										"1": "4109"
+									},
+									{
+										"0": "70",
+										"1": "226"
+									},
+									{
+										"0": "70",
+										"1": "4317"
+									},
+									{
+										"0": "70",
+										"1": "1911"
+									},
+									{
+										"0": "70",
+										"1": "1189"
+									},
+									{
+										"0": "70",
+										"1": "19"
+									},
+									{
+										"0": "70",
+										"1": "2549"
+									},
+									{
+										"0": "70",
+										"1": "3645"
+									},
+									{
+										"0": "70",
+										"1": "2648"
+									},
+									{
+										"0": "70",
+										"1": "1564"
+									},
+									{
+										"0": "88",
+										"1": "3551"
+									},
+									{
+										"0": "88",
+										"1": "3231"
+									},
+									{
+										"0": "88",
+										"1": "2461"
+									},
+									{
+										"0": "88",
+										"1": "1062"
+									},
+									{
+										"0": "88",
+										"1": "1604"
+									},
+									{
+										"0": "88",
+										"1": "3004"
+									},
+									{
+										"0": "88",
+										"1": "7"
+									},
+									{
+										"0": "88",
+										"1": "808"
+									},
+									{
+										"0": "88",
+										"1": "172"
+									},
+									{
+										"0": "91",
+										"1": "6"
+									},
+									{
+										"0": "91",
+										"1": "607"
+									},
+									{
+										"0": "91",
+										"1": "2995"
+									},
+									{
+										"0": "91",
+										"1": "171"
+									},
+									{
+										"0": "91",
+										"1": "323"
+									},
+									{
+										"0": "91",
+										"1": "1757"
+									}
+								],
+								"schema": [
+									{
+										"key": "0",
+										"name": "CustomerId",
+										"type": "int"
+									},
+									{
+										"key": "1",
+										"name": "ProductId",
+										"type": "int"
+									}
+								],
+								"truncated": false
+							},
+							"isSummary": false,
+							"language": "scala"
+						},
+						"persist_state": {
+							"view": {
+								"type": "details",
+								"chartOptions": {
+									"chartType": "bar",
+									"aggregationType": "sum",
+									"categoryFieldKeys": [
+										"1"
+									],
+									"seriesFieldKeys": [
+										"0"
+									],
+									"isStacked": false
+								}
+							}
+						}
+					},
+					"06b9a34b-1618-4299-8555-e495402210e3": {
+						"type": "Synapse.DataFrame",
+						"sync_state": {
+							"table": {
+								"rows": [
+									{
+										"0": "586682a8-db73-4e45-a376-c7553a44b248",
+										"1": "2",
+										"2": "610",
+										"3": "4",
+										"4": "35.790000000000000000",
+										"5": "157.4760000000000127151622564",
+										"6": "20170502",
+										"7": "53.63600000000000433075797446",
+										"8": "23",
+										"9": "17",
+										"10": "9559"
+									},
+									{
+										"0": "586682a8-db73-4e45-a376-c7553a44b248",
+										"1": "2",
+										"2": "1321",
+										"3": "3",
+										"4": "22.080000000000000000",
+										"5": "72.86400000000000588329385209",
+										"6": "20170502",
+										"7": "19.66800000000000158806301442",
+										"8": "23",
+										"9": "17",
+										"10": "9559"
+									},
+									{
+										"0": "586682a8-db73-4e45-a376-c7553a44b248",
+										"1": "2",
+										"2": "4364",
+										"3": "1",
+										"4": "16.150000000000000000",
+										"5": "17.76500000000000143440814782",
+										"6": "20170502",
+										"7": "5.896000000000000476063632959",
+										"8": "23",
+										"9": "17",
+										"10": "9559"
+									},
+									{
+										"0": "586682a8-db73-4e45-a376-c7553a44b248",
+										"1": "2",
+										"2": "4691",
+										"3": "2",
+										"4": "35.840000000000000000",
+										"5": "78.84800000000000636646291241",
+										"6": "20170502",
+										"7": "24.20000000000000195399252334",
+										"8": "23",
+										"9": "17",
+										"10": "9559"
+									},
+									{
+										"0": "586682a8-db73-4e45-a376-c7553a44b248",
+										"1": "2",
+										"2": "4691",
+										"3": "3",
+										"4": "35.840000000000000000",
+										"5": "118.2720000000000095496943686",
+										"6": "20170502",
+										"7": "36.30000000000000293098878501",
+										"8": "23",
+										"9": "17",
+										"10": "9559"
+									},
+									{
+										"0": "586682a8-db73-4e45-a376-c7553a44b248",
+										"1": "2",
+										"2": "2392",
+										"3": "1",
+										"4": "32.900000000000000000",
+										"5": "36.19000000000000292210700081",
+										"6": "20170502",
+										"7": "10.41700000000000084110496346",
+										"8": "23",
+										"9": "17",
+										"10": "9559"
+									},
+									{
+										"0": "586682a8-db73-4e45-a376-c7553a44b248",
+										"1": "2",
+										"2": "1347",
+										"3": "2",
+										"4": "21.810000000000000000",
+										"5": "47.98200000000000387423426673",
+										"6": "20170502",
+										"7": "12.82600000000000103561603737",
+										"8": "23",
+										"9": "17",
+										"10": "9559"
+									},
+									{
+										"0": "586682a8-db73-4e45-a376-c7553a44b248",
+										"1": "2",
+										"2": "402",
+										"3": "2",
+										"4": "25.090000000000000000",
+										"5": "55.19800000000000445687931006",
+										"6": "20170502",
+										"7": "12.84800000000000103739239421",
+										"8": "23",
+										"9": "17",
+										"10": "9559"
+									},
+									{
+										"0": "586682a8-db73-4e45-a376-c7553a44b248",
+										"1": "2",
+										"2": "56",
+										"3": "3",
+										"4": "33.300000000000000000",
+										"5": "109.8900000000000088729024128",
+										"6": "20170502",
+										"7": "29.43600000000000237676545112",
+										"8": "23",
+										"9": "17",
+										"10": "9559"
+									},
+									{
+										"0": "586682a8-db73-4e45-a376-c7553a44b248",
+										"1": "2",
+										"2": "157",
+										"3": "2",
+										"4": "28.870000000000000000",
+										"5": "63.51400000000000512834219535",
+										"6": "20170502",
+										"7": "14.43200000000000116529008665",
+										"8": "23",
+										"9": "17",
+										"10": "9559"
+									}
+								],
+								"schema": [
+									{
+										"key": "0",
+										"name": "TransactionId",
+										"type": "string"
+									},
+									{
+										"key": "1",
+										"name": "CustomerId",
+										"type": "string"
+									},
+									{
+										"key": "2",
+										"name": "ProductId",
+										"type": "string"
+									},
+									{
+										"key": "3",
+										"name": "Quantity",
+										"type": "string"
+									},
+									{
+										"key": "4",
+										"name": "Price",
+										"type": "string"
+									},
+									{
+										"key": "5",
+										"name": "TotalAmount",
+										"type": "string"
+									},
+									{
+										"key": "6",
+										"name": "TransactionDateId",
+										"type": "string"
+									},
+									{
+										"key": "7",
+										"name": "ProfitAmount",
+										"type": "string"
+									},
+									{
+										"key": "8",
+										"name": "Hour",
+										"type": "string"
+									},
+									{
+										"key": "9",
+										"name": "Minute",
+										"type": "string"
+									},
+									{
+										"key": "10",
+										"name": "StoreId",
+										"type": "string"
+									}
+								],
+								"truncated": false
+							},
+							"isSummary": false,
+							"language": "scala"
+						},
+						"persist_state": {
+							"view": {
+								"type": "details",
+								"chartOptions": {
+									"chartType": "bar",
+									"aggregationType": "count",
+									"categoryFieldKeys": [
+										"0"
+									],
+									"seriesFieldKeys": [
+										"0"
+									],
+									"isStacked": false
+								}
+							}
+						}
+					}
+				}
+			},
+			"enableDebugMode": false,
+			"kernelspec": {
+				"name": "synapse_pyspark",
+				"display_name": "Synapse PySpark"
+			},
+			"language_info": {
+				"name": "python"
+			},
+			"a365ComputeOptions": {
+				"id": "/subscriptions/e4d3ffa9-ab10-4a03-a91b-714a17ca73bd/resourceGroups/data-engineering-synapse-a6uoi8v/providers/Microsoft.Synapse/workspaces/asaworkspacea6uoi8v/bigDataPools/SparkPool01",
+				"name": "SparkPool01",
+				"type": "Spark",
+				"endpoint": "https://asaworkspacea6uoi8v.dev.azuresynapse.net/livyApi/versions/2019-11-01-preview/sparkPools/SparkPool01",
+				"auth": {
+					"type": "AAD",
+					"authResource": "https://dev.azuresynapse.net"
+				},
+				"sparkVersion": "2.4",
+				"nodeCount": 3,
+				"cores": 4,
+				"memory": 28,
+				"extraHeader": null
+			},
+			"sessionKeepAliveTimeout": 30
+		},
+		"cells": [
+			{
+				"cell_type": "code",
+				"source": [
+					"adls_account_name = 'asadatalakea6uoi8v'\r\n",
+					""
+				],
+				"attachments": null,
+				"execution_count": 1
+			},
+			{
+				"cell_type": "code",
+				"metadata": {
+					"jupyter": {
+						"source_hidden": false,
+						"outputs_hidden": false
+					},
+					"nteract": {
+						"transient": {
+							"deleting": false
+						}
+					}
+				},
+				"source": [
+					"# First, load the file `sale-20170501.csv` file, which we know from our previous exploration to be formatted correctly.\r\n",
+					"# Note the use of the `header` and `inferSchema` parameters. Header indicates the first row of the file contains column headers,\r\n",
+					"# and `inferSchema` instruct Spark to use data within the file to infer data types.\r\n",
+					"df = spark.read.load(f'abfss://wwi-02@{adls_account_name}.dfs.core.windows.net/sale-poc/sale-20170501.csv', format='csv', header=True, inferSchema=True)"
+				],
+				"attachments": null,
+				"execution_count": 5
+			},
+			{
+				"cell_type": "code",
+				"metadata": {
+					"jupyter": {
+						"source_hidden": false,
+						"outputs_hidden": false
+					},
+					"nteract": {
+						"transient": {
+							"deleting": false
+						}
+					},
+					"collapsed": false
+				},
+				"source": [
+					"display(df.limit(10))\r\n",
+					""
+				],
+				"attachments": null,
+				"execution_count": 6
+			},
+			{
+				"cell_type": "code",
+				"metadata": {
+					"jupyter": {
+						"source_hidden": false,
+						"outputs_hidden": false
+					},
+					"nteract": {
+						"transient": {
+							"deleting": false
+						}
+					}
+				},
+				"source": [
+					"df.printSchema();"
+				],
+				"attachments": null,
+				"execution_count": 7
+			},
+			{
+				"cell_type": "code",
+				"metadata": {
+					"jupyter": {
+						"source_hidden": false,
+						"outputs_hidden": false
+					},
+					"nteract": {
+						"transient": {
+							"deleting": false
+						}
+					},
+					"collapsed": false
+				},
+				"source": [
+					"# Create a new data frame containing a list of distinct CustomerId and ProductId values in descending order of the CustomerId.\r\n",
+					"df_distinct_products = df.select('CustomerId', 'ProductId').distinct().orderBy('CustomerId')\r\n",
+					"\r\n",
+					"# Display the first 100 rows of the resulting data frame.\r\n",
+					"display(df_distinct_products.limit(100))"
+				],
+				"attachments": null,
+				"execution_count": 8
+			},
+			{
+				"cell_type": "code",
+				"metadata": {
+					"jupyter": {
+						"source_hidden": false,
+						"outputs_hidden": false
+					},
+					"nteract": {
+						"transient": {
+							"deleting": false
+						}
+					}
+				},
+				"source": [
+					"# Next, let's try to read in the May 2, 2017 file using the same `load()` method we used for the first file.\r\n",
+					"df = spark.read.load(f'abfss://wwi-02@{adls_account_name}.dfs.core.windows.net/sale-poc/sale-20170502.csv', format='csv')\r\n",
+					"display(df.limit(10))"
+				],
+				"attachments": null,
+				"execution_count": 9
+			},
+			{
+				"cell_type": "code",
+				"metadata": {
+					"jupyter": {
+						"source_hidden": false,
+						"outputs_hidden": false
+					},
+					"nteract": {
+						"transient": {
+							"deleting": false
+						}
+					}
+				},
+				"source": [
+					"# Import the NumPy library. NumPy is a python library used for working with arrays.\r\n",
+					"import numpy as np\r\n",
+					"\r\n",
+					"# Read the CSV file into a resilient distributed dataset (RDD) as a text file. This will read each row of the file into rows in an RDD.\r\n",
+					"rdd = sc.textFile(f'abfss://wwi-02@{adls_account_name}.dfs.core.windows.net/sale-poc/sale-20170502.csv')"
+				],
+				"attachments": null,
+				"execution_count": 10
+			},
+			{
+				"cell_type": "code",
+				"metadata": {
+					"jupyter": {
+						"source_hidden": false,
+						"outputs_hidden": false
+					},
+					"nteract": {
+						"transient": {
+							"deleting": false
+						}
+					}
+				},
+				"source": [
+					"# Since we know there is only one row, grab the first row of the RDD and split in on the field delimiter (comma).\r\n",
+					"data = rdd.first().split(',')\r\n",
+					"\r\n",
+					"field_count = len(data)\r\n",
+					"# Print out the count of fields read into the array.\r\n",
+					"print(field_count)"
+				],
+				"attachments": null,
+				"execution_count": 11
+			},
+			{
+				"cell_type": "code",
+				"metadata": {
+					"jupyter": {
+						"source_hidden": false,
+						"outputs_hidden": false
+					},
+					"nteract": {
+						"transient": {
+							"deleting": false
+						}
+					}
+				},
+				"source": [
+					"import math\r\n",
+					"\r\n",
+					"expected_row_count = math.floor(field_count / 11)\r\n",
+					"print(f'The expected row count is: {expected_row_count}')"
+				],
+				"attachments": null,
+				"execution_count": 12
+			},
+			{
+				"cell_type": "code",
+				"metadata": {
+					"jupyter": {
+						"source_hidden": false,
+						"outputs_hidden": false
+					},
+					"nteract": {
+						"transient": {
+							"deleting": false
+						}
+					}
+				},
+				"source": [
+					"# Create an array to store the data associated with each \"row\". Set the max_index to the number of columns that are in each row. This is 11, which we noted above when viewing the schema of the May 1 file.\r\n",
+					"row_list = []\r\n",
+					"max_index = 11\r\n",
+					"\r\n",
+					"# Now, we are going to loop through the array of values extracted from the single row of the file and build rows consisting of 11 columns.\r\n",
+					"while max_index <= len(data):\r\n",
+					"    row = [data[i] for i in np.arange(max_index-11, max_index)]\r\n",
+					"    row_list.append(row)\r\n",
+					"\r\n",
+					"    max_index += 11\r\n",
+					"\r\n",
+					"print(f'The row array contains {len(row_list)} rows. The expected number of rows was {expected_row_count}.')"
+				],
+				"attachments": null,
+				"execution_count": 13
+			},
+			{
+				"cell_type": "code",
+				"metadata": {
+					"jupyter": {
+						"source_hidden": false,
+						"outputs_hidden": false
+					},
+					"nteract": {
+						"transient": {
+							"deleting": false
+						}
+					},
+					"collapsed": false
+				},
+				"source": [
+					"# Finally, we can use the row_list we created above to create a DataFrame. We can add to this a schema parameter, which contains the column names we saw in the schema of the first file.\r\n",
+					"df_fixed = spark.createDataFrame(row_list,schema=['TransactionId', 'CustomerId', 'ProductId', 'Quantity', 'Price', 'TotalAmount', 'TransactionDateId', 'ProfitAmount', 'Hour', 'Minute', 'StoreId'])\r\n",
+					"display(df_fixed.limit(10))"
+				],
+				"attachments": null,
+				"execution_count": 14
+			},
+			{
+				"cell_type": "code",
+				"metadata": {
+					"jupyter": {
+						"source_hidden": false,
+						"outputs_hidden": false
+					},
+					"nteract": {
+						"transient": {
+							"deleting": false
+						}
+					}
+				},
+				"source": [
+					"df_fixed.write.format('csv').option('header',True).mode('overwrite').option('sep',',').save(f'abfss://wwi-02@{adls_account_name}.dfs.core.windows.net/sale-poc/sale-20170502-fixed')\r\n",
+					""
+				],
+				"attachments": null,
+				"execution_count": 15
+			}
+		]
+	}
+}

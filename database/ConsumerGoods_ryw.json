@@ -1,0 +1,28 @@
+{
+	"name": "ConsumerGoods_ryw",
+	"properties": {
+		"Name": "ConsumerGoods_ryw",
+		"EntityType": "DATABASE",
+		"Description": "",
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"Properties": {
+			"DerivedModelDBInfo": "{\"ModelDirectives\":{\"BaseModel\":{\"Name\":\"ConsumerGoods\",\"Version\":\"0.1.0\"}}}",
+			"IsSyMSCDMDatabase": true,
+			"x-ms-usageinfo": "AzureSynapseDatabaseTemplate"
+		},
+		"Source": {
+			"Provider": "ADLS",
+			"Location": "abfss://tempdata@asadatalakea6uoi8v.dfs.core.windows.net/ConsumerGoods_ryw",
+			"Properties": {
+				"FormatType": "csv",
+				"LinkedServiceName": "asaworkspacea6uoi8v-WorkspaceDefaultStorage"
+			}
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "dda17aac-66ea-42df-87bb-cee76f305ef3"
+	},
+	"type": "DATABASE"
+}

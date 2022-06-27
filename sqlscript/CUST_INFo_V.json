@@ -1,0 +1,17 @@
+{
+	"name": "CUST_INFo_V",
+	"properties": {
+		"content": {
+			"query": "-- This is auto-generated code\n\ncreate view COUST_INFO as \nSELECT\n     *\nFROM\n    OPENROWSET(\n        BULK 'https://asadatalakea6uoi8v.dfs.core.windows.net/wwi-02/customer-info/customerinfo.csv',\n        FORMAT = 'CSV',\n        PARSER_VERSION = '2.0',\n        firstrow=2\n    ) \n  (\n    [UserName] NVARCHAR (50),\n    [Gender] NVARCHAR (10),\n    [Phone] NVARCHAR (50),\n    [Email] NVARCHAR (100),\n    [CreditCard] NVARCHAR (50)\n    ) AS [r];\n    go\n\n\n    CREATE VIEW CustomerInfo AS\n    SELECT * \nFROM OPENROWSET(\n        BULK 'https://asadatalakea6uoi8v.dfs.core.windows.net/wwi-02/customer-info/customerinfo.csv',\n        FORMAT = 'CSV',\n        PARSER_VERSION='2.0',\n        FIRSTROW=2\n    )\n    WITH (\n    [UserName] NVARCHAR (50),\n    [Gender] NVARCHAR (10),\n    [Phone] NVARCHAR (50),\n    [Email] NVARCHAR (100),\n    [CreditCard] NVARCHAR (50)\n    ) AS [r];\n    GO\n\nSELECT * FROM CustomerInfo;\nGO",
+			"metadata": {
+				"language": "sql"
+			},
+			"currentConnection": {
+				"databaseName": "dev",
+				"poolName": "Built-in"
+			},
+			"resultLimit": 5000
+		},
+		"type": "SqlQuery"
+	}
+}

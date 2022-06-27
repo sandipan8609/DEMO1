@@ -1,0 +1,22 @@
+{
+	"name": "DestinationDataset_5ek",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "asadatalakea6uoi8v",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileSystem": "wwi-02"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"quoteChar": "\""
+		},
+		"schema": []
+	},
+	"type": "Microsoft.Synapse/workspaces/datasets"
+}
