@@ -1,0 +1,16 @@
+{
+	"name": "GoogleBigQuery1",
+	"properties": {
+		"annotations": [],
+		"type": "GoogleBigQuery",
+		"typeProperties": {
+			"project": "total-zodiac-277318",
+			"requestGoogleDriveScope": false,
+			"authenticationType": "UserAuthentication"
+		},
+		"connectVia": {
+			"referenceName": "AutoResolveIntegrationRuntime",
+			"type": "IntegrationRuntimeReference"
+		}
+	}
+}
